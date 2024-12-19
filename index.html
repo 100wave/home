@@ -1,12 +1,159 @@
 <!DOCTYPE html>
-<html lang="ua">
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100wave</title>
-  </head>
-  <body>
-    <b>100wave</b>
-    <p>тут скоро будет сайт. ну шо ты голова?</p>
-  </body>
+    <title>Modern Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f9;
+            margin: 0;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .hero {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: #fff;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            margin-bottom: 2rem;
+        }
+
+        .hero button {
+            background: #fff;
+            color: #333;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .about {
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .about img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .form {
+            background: #fff;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form input, .form textarea, .form button {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form button {
+            background: #6a11cb;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Landing Page</h1>
+            <nav>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Our Website</h1>
+        <p>Creating simple and modern websites for everyone.</p>
+        <button>Learn More</button>
+    </section>
+
+    <section id="about" class="about">
+        <div>
+            <h2>About Us</h2>
+            <p>We are dedicated to providing top-notch solutions for your web development needs.</p>
+        </div>
+        <img src="https://via.placeholder.com/400" alt="About Us">
+    </section>
+
+    <section id="contact" class="form">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Landing Page. All Rights Reserved.</p>
+    </footer>
+</body>
 </html>
