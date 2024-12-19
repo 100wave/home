@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100WAVE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #eee;
+            background: #1c1c1c;
+            margin: 0;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 0.5rem 0; 
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 1rem;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        header .logo img {
+            height: 80px;
+            margin-right: 1rem;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: linear-gradient(45deg, #2b2b2b, #555);
+            color: #fff;
+            padding: 3rem 1rem; 
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero p {
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+        }
+
+        .hero button {
+            background: #444;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .hero button:hover {
+            background: #666;
+        }
+
+        .services {
+            display: none;
+            padding: 2rem 1rem;
+            max-width: 1200px;
+            margin: auto;
+            background: #2c2c2c;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .about {
+            padding: 0;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .about img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .about-content {
+            padding: 2rem 1rem;
+            text-align: center; 
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .form {
+            background: #2c2c2c;
+            padding: 2rem;
+            max-width: 600px;
+            margin: 2rem auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .form input, .form textarea, .form button {
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            border: 1px solid #555;
+            border-radius: 5px;
+            font-size: 1rem;
+            background: #1c1c1c;
+            color: #eee;
+        }
+
+        .form button {
+            background: #444;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form button:hover {
+            background: #666;
+        }
+
+        .cta {
+            background: linear-gradient(45deg, #2b2b2b, #444);
+            padding: 2rem;
+            text-align: center;
+            color: #fff;
+        }
+
+        .cta h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .cta button {
+            background: #444;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .cta button:hover {
+            background: #666;
+        }
+
+        footer {
+            text-align: center;
+            padding: 0.5rem; 
+            background: #333;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #aaa;
+        }
+
+        .footer-contacts {
+            margin-top: 2rem;
+            background: #2c2c2c;
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid #555;
+        }
+
+        .footer-contacts h2 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .footer-contacts .icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .footer-contacts .icons img {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .footer-contacts .icons img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Логотип">
+                <h1>100WAVE</h1>
+            </div>
+            <nav>
+                <a href="#about">Про нас</a>
+                <a href="#contact">Контакти</a>
+                <a href="#cta">Партнерам</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Сервіс з пошуку автозапчастин</h1>
+        <p>Підберемо найкращі варіанти</p>
+    </section>
+
+    <section id="about" class="about">
+        <img src="https://via.placeholder.com/1200x400" alt="Про нас">
+        <div class="about-content">
+            <h2>Працюємо з головними постачальниками<br>Ціни Вас приємно здивують</h2>
+            <p>Приймаємо Ваші заявки 24/7 <br>З приводу наявності відповідаємо 3 9:00 до 18:00</p>
+        </div>
+    </section>
+
+    <section id="contact" class="form">
+        <h2>Зв'язатися з нами</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+            <input type="text" name="name" placeholder="Ваше ім'я" required>
+            <input type="text" name="phone" placeholder="Ваш номер телефону" required>
+            <textarea name="message" placeholder="Модель авто, та запчастини що цікавлять" rows="5" required></textarea>
+            <button type="submit">Надіслати повідомлення</button>
+        </form>
+    </section>
+
+    <section id="cta" class="cta">
+        <h2>Є власне СТО, але немає деталіста? <br>Маємо вигідну пропозицію для тебе!</h2>
+        <button onclick="window.open('https://telegram.me/yourlink', '_blank')">Написати нашому менеджеру</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 100WAVE. Всі права захищені.</p>
+        <div class="footer-contacts">
+            <h2>Наші контакти</h2>
+            <div class="icons">
+                <img src="img/telegram.png" alt="Telegram" onclick="window.open('https://telegram.me/yourlink', '_blank')">
+                <img src="img/whatsapp.png" alt="WhatsApp" onclick="window.open('https://wa.me')">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
